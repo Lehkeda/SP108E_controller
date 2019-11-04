@@ -57,7 +57,7 @@ No compiling, no worring about cross-platform support, And more importantly to m
 
 #### Get device name: 38 xx xx xx 77 83
 | Start byte | Garbage bytes |Instruction byte | End byte |
-|--|--|--|--|--|
+|--|--|--|--|
 | 38 | xx xx xx | 77 | 83 |
 - Response:
   - 18-byes long
@@ -66,7 +66,7 @@ No compiling, no worring about cross-platform support, And more importantly to m
 
 #### Get current device settings: 38 xx xx xx 10 83
 | Start byte | Garbage bytes |Instruction byte | End byte |
-|--|--|--|--|--|
+|--|--|--|--|
 | 38 | xx xx xx | 10 | 83 |
 
 - Response: 
@@ -80,74 +80,86 @@ No compiling, no worring about cross-platform support, And more importantly to m
 ## Setting device information commands
 #### Change mono animation color 
 Example: 38 FF0000 2C 83 (sets it to red )
-| Start byte | Color |Instruction byte | End byte |
-|--|--|--|--|--|
+
+| Start byte | Color | Instruction byte | End byte |
+|--|--|--|--|
 | 38 | FF0000 | 2C | 83 |
 
 #### Change animation speed
 Example: 38 96 0000 03 83 (sets it to 150 )
-| Start byte | speed | Garbage bytes |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | speed | Garbage bytes | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | 96 | 00 00 | 03 | 83 |
 
 #### Change LEDs brightness
 Example: 38 FF 0000 2A 83 (sets it to 255 )
-| Start byte | Brightness | Garbage bytes |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | Brightness | Garbage bytes | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | FF | 00 00 | 2A | 83 |
 
 #### Change White LED brightness
 Example: 38 FF 0000 08 83 (sets it to 255 )
-| Start byte | White LED Brightness | Garbage bytes |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | White LED Brightness | Garbage bytes | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | FF | 00 00 | 08 | 83 |
 
 #### Change number of segments
 Example: 38 0800 00 2e 83 (sets number of segments to 2048)
-| Start byte | number of segments | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | number of segments | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | 0800 | 00 | 2e | 83 |
 
 #### Change number of LEDs per segment
 Example: 38 0019 00 2d  83 (sets number of LEds per segment to 25)
-| Start byte | number of LEDs per segment | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | number of LEDs per segment | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | 0019 | 00 | 2d | 83 |
 
 #### Set chip type
 Example: 38 03 0000 1c 83 (sets chip type to WS2811)
-| Start byte | Chip type | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | Chip type | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | 03 | 0000 | 1c | 83 |
 
 #### Toggle off or on
 Example: 38 000000 aa 83
-| Start byte | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|
+
+| Start byte | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|
 | 38 | 000000 | aa| 83 |
 
 #### Enable mixed animation auto mode
 Example: 38 000000  06 83
-| Start byte | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|
+
+| Start byte | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|
 | 38 | 000000 | 06| 83 |
 
 #### Change mixed animation
 Example: 38 03 0000 2c 83 (change it to animation number 3)
-| Start byte | Animation number | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | Animation number | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | 03 | 0000 | 2c | 83 |
 
 #### Change mono color animation
 Example: 38 cd 0000 2c 83 (change it to meteor animation )
-| Start byte | Mono color animation | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | Mono color animation | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|--
 | 38 | cd | 0000 | 2c | 83 |
 
 #### Set color order
 Example: 38 02 0000 3c 83 (set it to GRB )
-| Start byte | Color order | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|--|
+
+| Start byte | Color order | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|--|
 | 38 | 02 | 0000 | 3c | 83 |
 
 #### Set device name
@@ -155,8 +167,8 @@ Example: 38 02 0000 3c 83 (set it to GRB )
 Example: 38 000000  14 83
 2. Wait for the response
 
-| Start byte | Garbage byte |Instruction byte | End byte |
-|--|--|--|--|--|
+| Start byte | Garbage byte | Instruction byte | End byte |
+|--|--|--|--|
 | 38 | 000000 | 14| 83 |
 
 3. If the response is 1, Send the new name (maximum 10 characters)
