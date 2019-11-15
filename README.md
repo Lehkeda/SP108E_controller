@@ -25,9 +25,8 @@ No compiling, no worring about cross-platform support, And more importantly to m
 ## To-Do:
 
 - Add support for connecting the controller for an exiting Wi-Fi network
-- Add support for finding controllers in the current network
-- ~~Add support for the playback function that's in the official APP~~ (Needs a better solution)
-
+- ~~Add support for finding controllers in the current network~~ (Needs a better solution)
+- Add support for the playback function that's in the official APP 
 ## How does the APP conrol the SP108E box?
 
 1. It broadcasts a who has request to find the device on the
